@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天堂3.0 - 天堂3.0版本更新详情、职业平衡调整与新手入门指南</title>
+    <meta name="description" content="天堂3.0官网提供最新的天堂3.0版本更新内容解析、职业平衡调整说明、新手快速入门指南及游戏攻略。了解天堂3.0的新特性、游戏机制与下载信息。">
+    <meta name="keywords" content="天堂3.0, 天堂3.0更新, 天堂3.0攻略, 天堂3.0职业, 天堂3.0下载">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #f4a261;
+            --secondary-color: #2a9d8f;
+            --dark-bg: #1a1a1d;
+            --card-bg: #2d2d30;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --accent-gold: #e76f51;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 29, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0.8rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .cta-btn:hover {
+            background-color: #21867a;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(26,26,29,0.3), var(--dark-bg)), url('https://picsum.photos/seed/t天堂3/1920/1080.jpg') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+            display: block;
+            font-size: 3.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #d4884a;
+            border-color: #d4884a;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--dark-bg);
+        }
+
+        /* Main Content Layout */
+        main {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+        }
+
+        /* Update Highlights Grid */
+        .update-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .update-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            border: 1px solid #333;
+        }
+
+        .update-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .update-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .update-content {
+            padding: 1.5rem;
+        }
+
+        .update-tag {
+            background-color: var(--accent-gold);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .update-title {
+            margin: 0.8rem 0;
+            font-size: 1.3rem;
+        }
+
+        .update-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Class System Section */
+        .class-section {
+            background-color: #232326;
+            padding: 4rem 0;
+            margin-top: 4rem;
+        }
+
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .class-card {
+            background: linear-gradient(145deg, #2d2d30, #252528);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border-top: 4px solid var(--secondary-color);
+            transition: all 0.3s;
+        }
+
+        .class-card:hover {
+            background: linear-gradient(145deg, #3d3d40, #2d2d30);
+        }
+
+        .class-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .class-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .class-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Guide List */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .guide-item {
+            display: flex;
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            align-items: center;
+            gap: 1.5rem;
+            border-left: 4px solid transparent;
+        }
+
+        .guide-item:hover {
+            border-left-color: var(--secondary-color);
+            background-color: #353538;
+        }
+
+        .guide-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .guide-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .guide-info p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-top: 5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #333;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            padding: 1rem 0;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding-bottom: 1rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid #333;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #222;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero h1 span {
+                font-size: 2.2rem;
+            }
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+            .header-inner {
+                justify-content: center;
+            }
+            .guide-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>天堂3.0</span> 官网
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#updates">版本更新</a></li>
+                    <li><a href="#classes">职业介绍</a></li>
+                    <li><a href="#guide">新手指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-btn">立即下载</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>天堂3.0 <span>全新进化</span></h1>
+            <p>体验更加流畅的战斗系统、全新的职业分支与史诗级副本内容。重燃昔日荣光，开启新的冒险篇章。</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">开始游戏</a>
+                <a href="#guide" class="btn btn-outline">查看攻略</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Update Highlights -->
+        <section id="updates">
+            <div class="section-title">
+                <h2>3.0 版本更新亮点</h2>
+                <p>本次更新带来了多项核心系统优化与内容扩充</p>
+            </div>
+            <div class="update-grid">
+                <article class="update-card">
+                    <img src="https://picsum.photos/seed/t天堂3/400/250.jpg" alt="新职业" class="update-image">
+                    <div class="update-content">
+                        <span class="update-tag">职业系统</span>
+                        <h3 class="update-title">全新转职分支开放</h3>
+                        <p class="update-desc">战士与法师等经典职业现已开放二转，每个职业拥有独特的技能树与战斗风格，满足多样化玩法需求。</p>
+                        <a href="#" style="color: var(--primary-color); font-size: 0.9rem;">了解更多 &rarr;</a>
+                    </div>
+                </article>
+                <article class="update-card">
+                    <img src="https://picsum.photos/seed/t天堂3/400/250.jpg" alt="副本" class="update-image">
+                    <div class="update-content">
+                        <span class="update-tag">副本内容</span>
+                        <h3 class="update-title">“遗忘神殿”史诗副本</h3>
+                        <p class="update-desc">挑战全新的高难度副本，探索古老的遗迹，获取传说级装备与稀有坐骑材料。</p>
+                        <a href="#" style="color: var(--primary-color); font-size: 0.9rem;">副本攻略 &rarr;</a>
+                    </div>
+                </article>
+                <article class="update-card">
+                    <img src="https://picsum.photos/seed/t天堂3/400/250.jpg" alt="PVP" class="update-image">
+                    <div class="update-content">
+                        <span class="update-tag">PVP竞技</span>
+                        <h3 class="update-title">跨服天梯赛开启</h3>
+                        <p class="update-desc">打破服务器限制，与全服顶尖玩家同台竞技。排名越高，奖励越丰厚，赢取专属称号与时装。</p>
+                        <a href="#" style="color: var(--primary-color); font-size: 0.9rem;">查看赛制 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Class System -->
+        <section id="classes" class="class-section">
+            <div class="section-title">
+                <h2>职业介绍</h2>
+                <p>选择你的战斗伙伴，共赴战场</p>
+            </div>
+            <div class="class-grid">
+                <div class="class-card">
+                    <span class="class-icon">⚔️</span>
+                    <h3 class="class-name">战士</h3>
+                    <p class="class-desc">近战物理输出，拥有极高的生存能力和控制技能，团队中的坚实壁垒。</p>
+                </div>
+                <div class="class-card">
+                    <span class="class-icon">🛡️</span>
+                    <h3 class="class-name">骑士</h3>
+                    <p class="class-desc">防御型战士，擅长格挡与反击，能够有效保护队友免受伤害。</p>
+                </div>
+                <div class="class-card">
+                    <span class="class-icon">🔥</span>
+                    <h3 class="class-name">法师</h3>
+                    <p class="class-desc">远程魔法输出，掌握冰火雷电之力，对群体敌人造成毁灭性打击。</p>
+                </div>
+                <div class="class-card">
+                    <span class="class-icon">🏹</span>
+                    <h3 class="class-name">弓箭手</h3>
+                    <p class="class-desc">敏捷型远程职业，拥有极高的暴击率和闪避能力，擅长游击战术。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Player Guide -->
+        <section id="guide">
+            <div class="section-title">
+                <h2>新手入门指南</h2>
+                <p>从零开始，快速掌握游戏核心玩法</p>
+            </div>
+            <div class="guide-list">
+                <div class="guide-item">
+                    <div class="guide-icon">📜</div>
+                    <div class="guide-info">
+                        <h3>主线任务流程</h3>
+                        <p>跟随主线剧情推进，不仅能够快速提升等级，还能解锁地图传送点与基础功能。</p>
+                    </div>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">⚔️</div>
+                    <div class="guide-info">
+                        <h3>装备获取与强化</h3>
+                        <p>通过日常副本、世界BOSS以及交易行获取装备。利用强化系统提升装备属性，注意强化失败保护机制。</p>
+                    </div>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">🤝</div>
+                    <div class="guide-info">
+                        <h3>加入公会</h3>
+                        <p>加入或创建公会，参与公会战与公会副本。公会成员之间可以互相辅助，共享资源。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq-section">
+            <div class="section-title">
+                <h2>常见问题 (FAQ)</h2>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">天堂3.0 对电脑配置有要求吗？ <span>+</span></div>
+                <div class="faq-answer">天堂3.0针对中高端PC进行了优化。最低配置建议使用Intel i5或同级别处理器，8GB内存，GTX 660级别显卡。建议使用Windows 10 64位系统以获得最佳体验。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">游戏是否支持跨平台游玩？ <span>+</span></div>
+                <div class="faq-answer">目前天堂3.0仅支持PC客户端游玩。移动端版本正在开发测试阶段，敬请期待后续公告。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何找回丢失的账号？ <span>+</span></div>
+                <div class="faq-answer">请前往官网登录页面点击“账号找回”，通过绑定的邮箱或手机号进行验证，系统将协助您重置密码。</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>天堂3.0</h4>
+                    <p style="color: #666; font-size: 0.9rem;">致力于为玩家提供最优质的MMORPG体验，重现经典，创造未来。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">玩家社区</a></li>
+                        <li><a href="#">客服中心</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持</h4>
+                    <ul>
+                        <li><a href="#">新手帮助</a></li>
+                        <li><a href="#">论坛</a></li>
+                        <li><a href="#">状态监控</a></li>
+                        <li><a href="#">反馈建议</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 天堂3.0 官方网站. All Rights Reserved. 本站为游戏资讯展示页面，非官方网站。
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Script
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+                
+                const span = item.querySelector('span');
+                if (parent.classList.contains('active')) {
+                    span.textContent = '-';
+                } else {
+                    span.textContent = '+';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
