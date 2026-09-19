@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gtv开火-专业射击游戏资讯与战术攻略平台</title>
+    <meta name="description" content="gtv开火提供最新的FPS射击游戏资讯、职业赛事报道、游戏战术攻略、硬件评测及社区互动，致力于为硬核玩家提供最前沿的射击游戏体验指南。">
+    <meta name="keywords" content="gtv开火,射击游戏,战术攻略,电竞资讯,FPS游戏,游戏评测">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1d3557;
+            --accent-color: #457b9d;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid #334155;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .header-actions button:hover {
+            background-color: #c1121f;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(29, 53, 87, 0.6)), url('https://picsum.photos/seed/fpsgame/1600/900') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--text-main);
+            color: var(--bg-dark);
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .hero-btn:hover {
+            background-color: #e2e8f0;
+        }
+
+        /* Main Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.6rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .view-all {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+
+        /* Game List Grid */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .game-card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #334155;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--accent-color);
+        }
+
+        .card-image {
+            height: 160px;
+            background-color: #334155;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .card-content {
+            padding: 1.25rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: rgba(69, 123, 157, 0.2);
+            color: var(--accent-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #334155;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #334155;
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #334155;
+        }
+
+        .rank-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background-color: var(--bg-dark);
+            color: var(--text-muted);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            margin-right: 1rem;
+            font-weight: 700;
+        }
+
+        .rank-num.top-3 {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .rank-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .rank-info span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Strategy Section */
+        .strategy-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .strategy-item {
+            display: flex;
+            gap: 1rem;
+            background-color: var(--bg-card);
+            padding: 1rem;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+
+        .strategy-item:hover {
+            background-color: #263346;
+        }
+
+        .strategy-thumb {
+            width: 120px;
+            height: 80px;
+            border-radius: 4px;
+            background-color: #334155;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .strategy-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .strategy-content {
+            flex: 1;
+        }
+
+        .strategy-content h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .strategy-content p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .strategy-meta {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b1120;
+            border-top: 1px solid #334155;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #1e293b;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                height: 400px;
+                text-align: center;
+            }
+
+            .hero-content {
+                margin: 0 auto;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-brand p {
+                margin: 1rem auto;
+            }
+
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                <span>GTV开火</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">热门游戏</a></li>
+                    <li><a href="#">战术攻略</a></li>
+                    <li><a href="#">硬件评测</a></li>
+                    <li><a href="#">电竞社区</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button>登录 / 注册</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <span class="hero-tag">本周热门</span>
+                <h1>掌握战场先机<br>GTV开火带你解锁战术新境界</h1>
+                <p>汇集全球顶级FPS游戏资讯、深度战术解析与硬核硬件评测，为每一位追求极致射击体验的玩家提供专业支持。</p>
+                <a href="#" class="hero-btn">开始阅读</a>
+            </div>
+        </section>
+
+        <div class="container main-layout">
+            <!-- Left Content -->
+            <div class="content-area">
+                
+                <!-- Featured Games -->
+                <section>
+                    <div class="section-header">
+                        <h2 class="section-title">热门射击游戏</h2>
+                        <a href="#" class="view-all">查看全部 &rarr;</a>
+                    </div>
+                    <div class="game-grid">
+                        <article class="game-card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/cod/400/300" alt="使命召唤">
+                                <span class="card-badge">PC</span>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">使命召唤：现代战争 III</h3>
+                                <div class="card-meta">
+                                    <span>FPS</span>
+                                    <span>更新中</span>
+                                </div>
+                                <p class="card-desc">深入解析现代战争系列的最新战役模式与多人对战战术，包括地图点位分析与武器改装推荐。</p>
+                                <div class="card-tags">
+                                    <span class="tag">多人模式</span>
+                                    <span class="tag">战役</span>
+                                    <span class="tag">枪械改装</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="game-card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/apex/400/300" alt="Apex英雄">
+                                <span class="card-badge">PC/PS5</span>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apex英雄：赛季攻略</h3>
+                                <div class="card-meta">
+                                    <span>大逃杀</span>
+                                    <span>赛季更新</span>
+                                </div>
+                                <p class="card-desc">掌握最新英雄技能连招与战术跑位，助你在百人混战中脱颖而出，成为最后的幸存者。</p>
+                                <div class="card-tags">
+                                    <span class="tag">生存指南</span>
+                                    <span class="tag">英雄推荐</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="game-card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/valorant/400/300" alt="无畏契约">
+                                <span class="card-badge">PC</span>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">无畏契约：战术手册</h3>
+                                <div class="card-meta">
+                                    <span>Tactical FPS</span>
+                                    <span>战术教学</span>
+                                </div>
+                                <p class="card-desc">从基础枪法练习到高级道具投掷技巧，全方位解析无畏契约的竞技对抗核心。</p>
+                                <div class="card-tags">
+                                    <span class="tag">枪法</span>
+                                    <span class="tag">道具</span>
+                                    <span class="tag">地图</span>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="game-card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/csgo2/400/300" alt="CS2">
+                                <span class="card-badge">PC</span>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">CS2：CS2版本更新解读</h3>
+                                <div class="card-meta">
+                                    <span>射击竞技</span>
+                                    <span>版本更新</span>
+                                </div>
+                                <p class="card-desc">详细分析CS2引擎更新带来的画面、声音与枪械手感变化，提供适应新版本的训练计划。</p>
+                                <div class="card-tags">
+                                    <span class="tag">CS2</span>
+                                    <span class="tag">枪法训练</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Latest Strategies -->
+                <section style="margin-top: 3rem;">
+                    <div class="section-header">
+                        <h2 class="section-title">最新战术攻略</h2>
+                        <a href="#" class="view-all">更多攻略 &rarr;</a>
+                    </div>
+                    <div class="strategy-list">
+                        <article class="strategy-item">
+                            <div class="strategy-thumb">
+                                <img src="https://picsum.photos/seed/mouse/200/150" alt="鼠标设置">
+                            </div>
+                            <div class="strategy-content">
+                                <h3>职业选手同款：FPS游戏鼠标DPI设置指南</h3>
+                                <p>如何根据个人手型与游戏类型选择合适的DPI与灵敏度？本文提供详细的职业选手设置参考与微调技巧。</p>
+                                <div class="strategy-meta">2023-10-24 · 硬件设置</div>
+                            </div>
+                        </article>
+                        <article class="strategy-item">
+                            <div class="strategy-thumb">
+                                <img src="https://picsum.photos/seed/keyboard/200/150" alt="键鼠设置">
+                            </div>
+                            <div class="strategy-content">
+                                <h3>提升反应速度：键鼠宏设置与按键布局优化</h3>
+                                <p>合理的按键布局可以减少手指移动距离，提高操作效率。探讨适合不同手型的键鼠布局方案。</p>
+                                <div class="strategy-meta">2023-10-23 · 操作技巧</div>
+                            </div>
+                        </article>
+                        <article class="strategy-item">
+                            <div class="strategy-thumb">
+                                <img src="https://picsum.photos/seed/monitor/200/150" alt="显示器设置">
+                            </div>
+                            <div class="strategy-content">
+                                <h3>144Hz vs 240Hz：显示器刷新率对射击游戏的影响</h3>
+                                <p>刷新率是否真的能决定胜负？通过实际测试数据，解析高刷显示器带来的流畅度提升与视觉体验差异。</p>
+                                <div class="strategy-meta">2023-10-22 · 硬件评测</div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar">
+                <!-- Hot Games Ranking -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门游戏排行</h3>
+                    <ul class="rank-list">
+                        <li>
+                            <span class="rank-num top-3">1</span>
+                            <div class="rank-info">
+                                <h4>无畏契约</h4>
+                                <span>战术竞技</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num top-3">2</span>
+                            <div class="rank-info">
+                                <h4>Apex英雄</h4>
+                                <span>大逃杀</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num top-3">3</span>
+                            <div class="rank-info">
+                                <h4>CS2</h4>
+                                <span>射击竞技</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num">4</span>
+                            <div class="rank-info">
+                                <h4>使命召唤</h4>
+                                <span>多人对战</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num">5</span>
+                            <div class="rank-info">
+                                <h4>彩虹六号</h4>
+                                <span>战术进攻</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Hardware Recommendations -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">推荐外设</h3>
+                    <div class="strategy-item" style="padding: 0.5rem; gap: 0.5rem;">
+                        <div class="strategy-thumb" style="width: 80px; height: 60px;">
+                            <img src="https://picsum.photos/seed/mouse2/100/80" alt="外设">
+                        </div>
+                        <div class="strategy-content">
+                            <h4 style="font-size: 0.9rem;">罗技 G Pro X Superlight</h4>
+                            <p style="font-size: 0.8rem; margin-bottom: 0.2rem;">轻量化旗舰</p>
+                            <span style="font-size: 0.8rem; color: var(--primary-color);">查看评测 &rarr;</span>
+                        </div>
+                    </div>
+                    <div class="strategy-item" style="padding: 0.5rem; gap: 0.5rem;">
+                        <div class="strategy-thumb" style="width: 80px; height: 60px;">
+                            <img src="https://picsum.photos/seed/headset/100/80" alt="外设">
+                        </div>
+                        <div class="strategy-content">
+                            <h4 style="font-size: 0.9rem;">赛睿 Arctis Nova Pro</h4>
+                            <p style="font-size: 0.8rem; margin-bottom: 0.2rem;">沉浸式音效</p>
+                            <span style="font-size: 0.8rem; color: var(--primary-color);">查看评测 &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="sidebar-widget" style="background: linear-gradient(135deg, #1d3557, #457b9d); border: none;">
+                    <h3 class="widget-title" style="border-bottom-color: rgba(255,255,255,0.3);">订阅周刊</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #e2e8f0;">每周获取最新游戏资讯与独家攻略，不错过任何精彩内容。</p>
+                    <input type="email" placeholder="输入您的邮箱" style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; border-radius: 4px; border: none;">
+                    <button style="width: 100%; padding: 0.5rem; background-color: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600;">立即订阅</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                        <span>GTV开火</span>
+                    </a>
+                    <p>专注于射击游戏领域的专业资讯与社区平台，连接玩家与电竞未来。提供最硬核的游戏攻略与最前沿的硬件评测。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>游戏频道</h4>
+                    <ul>
+                        <li><a href="#">战术射击</a></li>
+                        <li><a href="#">大逃杀</a></li>
+                        <li><a href="#">MOBA竞技</a></li>
+                        <li><a href="#">独立游戏</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">Bilibili</a></li>
+                        <li><a href="#">Discord社区</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 GTV开火 版权所有 | 本站内容仅供学习交流，游戏版权归原作者所有
+            </div>
+        </div>
+    </footer>
+
+</body>
+                  </html>
