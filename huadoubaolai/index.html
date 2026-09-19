@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花都宝铼雅居 - 花都高尚住宅社区规划与品质生活指南</title>
+    <meta name="description" content="花都宝铼雅居官方首页，提供楼盘详情、户型图赏析、周边配套、交通路线及最新房价动态。致力于打造花都宜居典范，关注宝铼雅居的社区规划与居住环境。">
+    <meta name="keywords" content="花都宝铼雅居, 宝铼雅居楼盘, 广州花都新房, 花都住宅小区, 宝铼雅居房价">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --text-light: #666;
+            --bg-light: #f9f9f9;
+            --bg-white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .bg-white {
+            background-color: var(--bg-white);
+        }
+
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #a93226;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://picsum.photos/seed/architecture/1920/1080') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: -3rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+
+        .stat-item p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* Community Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border-top: 4px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--accent-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        /* Location & Map Placeholder */
+        .location-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .location-info ul {
+            margin-top: 1.5rem;
+        }
+
+        .location-info li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .location-info li::before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        .map-placeholder {
+            background-color: #e0e0e0;
+            height: 400px;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .map-overlay {
+            position: absolute;
+            background: rgba(255,255,255,0.9);
+            padding: 1rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* FAQ */
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-white);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-question:hover {
+            background-color: #f1f1f1;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-light);
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 1.5rem;
+            max-height: 200px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #bdc3c7;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin: 1rem 0;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+
+            .location-section {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>❖</span> 花都宝铼雅居
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#community">社区亮点</a></li>
+                    <li><a href="#location">区位交通</a></li>
+                    <li><a href="#facilities">配套设施</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">预约看房</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>花都宝铼雅居：雅致生活，触手可及</h1>
+                <p>坐落于花都核心地段，集现代建筑美学与生态园林景观于一体。为您打造高品质的居家环境，开启您的尊享生活。</p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="#community" class="cta-button" style="background-color: white; color: var(--primary-color);">了解更多</a>
+                    <a href="#contact" class="cta-button" style="background-color: transparent; border: 2px solid white;">在线咨询</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <div class="container">
+            <div class="stats-bar">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>3.0</h3>
+                        <p>容积率</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>35%</h3>
+                        <p>绿化率</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>5.0</h3>
+                        <p>建筑密度</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24H</h3>
+                        <p>安保服务</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Community Features -->
+        <section id="community" class="section bg-white">
+            <div class="container">
+                <div class="text-center">
+                    <h2>社区亮点</h2>
+                    <p>精心雕琢每一处细节，只为给您最舒适的居住体验</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🌳</div>
+                        <h3>生态园林</h3>
+                        <p>采用新中式园林设计，三重园林景观层层递进，四季常青，让您推窗见绿，出门入园。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🏠</div>
+                        <h3]>阔绰户型</h3>
+                        <p>主力户型涵盖两房至四房，南北通透，全明设计，最大化利用每一寸空间，满足家庭成长需求。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>智慧社区</h3>
+                        <p>引入智能门禁、人脸识别系统及24小时电子巡更系统，科技护航，让居住更安全便捷。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location & Transport -->
+        <section id="location" class="section bg-light">
+            <div class="container">
+                <div class="text-center">
+                    <h2>黄金区位</h2>
+                    <p>紧邻城市主干道，交通路网发达，畅达全城</p>
+                </div>
+                <div class="location-section">
+                    <div class="location-info">
+                        <h3>便捷出行，通达八方</h3>
+                        <p>花都宝铼雅居地理位置优越，毗邻广州北站及地铁9号线，无论是日常通勤还是周末出行，都能轻松驾驭。周边汇聚商业综合体、医疗机构及教育资源，一站式满足生活所需。</p>
+                        <ul>
+                            <li><strong>交通枢纽：</strong> 距离广州北站约2公里，地铁9号线直达市区。</li>
+                            <li><strong>主干道：</strong> 紧邻新华街核心路网，驱车10分钟可达白云国际机场。</li>
+                            <li><strong>商圈配套：</strong> 步行范围内包含大型购物中心及生活超市。</li>
+                            <li><strong>教育医疗：</strong> 周边分布多所重点中小学及三甲医院。</li>
+                        </ul>
+                        <a href="#contact" class="cta-button" style="margin-top: 1rem;">获取详细交通指南</a>
+                    </div>
+                    <div class="map-placeholder">
+                        <img src="https://picsum.photos/seed/map/800/600" alt="花都宝铼雅居周边交通地图示意图">
+                        <div class="map-overlay">
+                            <strong>位置示意图</strong><br>
+                            <small>花都区新华街核心区域</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities -->
+        <section id="facilities" class="section bg-white">
+            <div class="container">
+                <div class="text-center">
+                    <h2>全龄配套</h2>
+                    <p>从儿童乐园到长者活动中心，全龄段关怀</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🏊</div>
+                        <h3>室内恒温泳池</h3>
+                        <p>专属业主泳池，四季恒温，畅享健康水生活，缓解生活压力。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🏃</div>
+                        <h3>主题运动广场</h3>
+                        <p>配备环形跑道、篮球场及羽毛球场，满足不同年龄段运动爱好者的需求。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>邻里书吧</h3>
+                        <p>静谧的阅读空间，定期举办读书分享会，营造浓厚的社区文化氛围。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="text-center">
+                    <h2>常见问题</h2>
+                    <p>关于花都宝铼雅居，您可能关心这些问题</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            花都宝铼雅居目前的在售户型有哪些？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>目前主力在售户型为约89㎡的南北通透三房及约128㎡的宽敞四房，部分楼层仍有少量房源在售，具体请咨询置业顾问。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            小区的物业管理费是多少？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>小区实行封闭式管理，物业费根据不同物业类型定价，具体收费标准请参考售楼处公示信息。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            购房是否有优惠活动？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>项目不定期会推出优惠活动，如按时签约优惠、团购优惠等。建议您在购房前与销售中心确认最新的促销政策。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / CTA Section -->
+        <section id="contact" class="section bg-white" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white;">
+            <div class="container text-center">
+                <h2 style="color: white; border-bottom-color: white;">预约看房</h2>
+                <p style="color: rgba(255,255,255,0.8);">了解更多详情，尊享一对一专属服务</p>
+                <div style="margin-top: 2rem; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                    <div style="text-align: left;">
+                        <strong>售楼热线</strong>
+                        <p style="color: white; font-size: 1.2rem;">020-8888 6666</p>
+                    </div>
+                    <div style="text-align: left;">
+                        <strong>项目地址</strong>
+                        <p style="color: white;">广州市花都区新华街XX路88号</p>
+                    </div>
+                    <div style="text-align: left;">
+                        <strong>开放时间</strong>
+                        <p style="color: white;">周一至周日 9:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>花都宝铼雅居</h4>
+                    <p>致力于为花都居民提供高品质、高舒适度的居住环境。我们用心建造每一处细节，让家成为您最温暖的港湾。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">楼盘概况</a></li>
+                        <li><a href="#">价格走势</a></li>
+                        <li><a href="#">户型图库</a></li>
+                        <li><a href="#">视频看房</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul>
+                        <li><a href="#">购房指南</a></li>
+                        <li><a href="#">贷款计算</a></li>
+                        <li><a href="#">业主论坛</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">官方微博</a></li>
+                        <li><a href="#">抖音号</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 花都宝铼雅居 版权所有. 本页面为信息展示用，具体以售楼处为准。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth Scroll for Navigation
+            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
