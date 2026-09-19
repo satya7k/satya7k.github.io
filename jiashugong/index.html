@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="家属工政策查询、社保待遇办理、历史身份认定及维权指南。提供关于家属工历史遗留问题的最新资讯、办事流程及法律援助服务。">
+    <meta name="keywords" content="家属工,家属工政策,家属工社保,家属工认定,家属工维权">
+    <title>家属工-历史身份认定与社保权益办理指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --secondary-color: #4a5568;
+            --accent-color: #c53030;
+            --bg-color: #f7fafc;
+            --card-bg: #ffffff;
+            --text-main: #1a202c;
+            --text-light: #718096;
+            --border-color: #e2e8f0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #2b436f;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: #ebf8ff;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2a4365 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Main Content Grid */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+
+        /* Content Sections */
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .info-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--border-color);
+            z-index: 0;
+        }
+
+        .step {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            width: 22%;
+        }
+
+        .step-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+        }
+
+        .step h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .faq-list li {
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .faq-list li:last-child {
+            border-bottom: none;
+        }
+
+        .faq-list h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .faq-list p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .download-list a {
+            display: block;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .download-list a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background-color: #fff5f5;
+            border: 1px solid #fed7d7;
+            color: #c53030;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            display: flex;
+            gap: 0.5rem;
+            align-items: flex-start;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3748;
+            color: #a0aec0;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #4a5568;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .process-steps {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .step {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                text-align: left;
+            }
+
+            .step-icon {
+                margin: 0;
+                min-width: 32px;
+                height: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                家属工政策网
+            </div>
+            <button class="mobile-menu-btn" aria-label="菜单">☰</button>
+            <nav class="nav-menu">
+                <a href="#" class="active">首页</a>
+                <a href="#policy">政策解读</a>
+                <a href="#process">认定流程</a>
+                <a href="#faq">常见问题</a>
+                <a href="#guide">办事指南</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>家属工历史身份认定与社保办理</h1>
+                <p>致力于解决历史遗留问题，为家属工群体提供政策咨询、身份认定及社保补缴的全流程指导服务。</p>
+                <div class="hero-tags">
+                    <span class="tag">身份认定</span>
+                    <span class="tag">社保补缴</span>
+                    <span class="tag">历史遗留</span>
+                    <span class="tag">法律援助</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container main-layout">
+            <!-- Left Content -->
+            <div class="content-area">
+                
+                <section id="policy" class="info-card">
+                    <div class="section-title">
+                        <h2>什么是“家属工”？</h2>
+                    </div>
+                    <p>“家属工”通常是指在计划经济时期，为全民所有制或集体所有制企业工作，但未正式办理转正录用手续，且其劳动关系依附于该企业职工家属身份的工人。这一群体在历史上为国家和企业的发展做出了重要贡献，但在企业改制、破产等过程中，往往面临劳动关系确认难、社保断缴、待遇享受低等问题。</p>
+                    <br>
+                    <h3>核心权益与现状</h3>
+                    <p>随着国家社会保障制度的完善，各地政府陆续出台政策，旨在解决家属工的历史遗留问题。目前，家属工主要诉求集中在以下几个方面：</p>
+                    <ul style="margin-top: 1rem; margin-left: 1.5rem; color: var(--secondary-color);">
+                        <li><strong>劳动关系认定：</strong>确认与原企业的劳动关系，补签劳动合同或办理事实劳动关系证明。</li>
+                        <li><strong>社保补缴：</strong>补缴中断期间的养老保险和医疗保险，确保达到法定退休年龄后享受待遇。</li>
+                        <li><strong>医保报销：</strong>解决因历史原因导致医保年限不足的问题。</li>
+                        <li><strong>工伤待遇：</strong>如果家属工在工作期间发生工伤，应参照正式职工标准进行赔偿。</li>
+                    </ul>
+                </section>
+
+                <section id="process" class="info-card">
+                    <div class="section-title">
+                        <h2>家属工身份认定流程</h2>
+                        <a href="#" style="font-size: 0.9rem; color: var(--primary-color);">查看详情 &rarr;</a>
+                    </div>
+                    
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-icon">1</div>
+                            <h4>准备材料</h4>
+                            <p>本人身份证、户口本、原企业工作证明、工资条或劳保卡、招工表复印件等。</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon">2</div>
+                            <h4>企业申报</h4>
+                            <p>向原企业或企业主管部门提交申请，由企业出具相关证明材料。</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon">3</div>
+                            <h4>劳动仲裁/认定</h4>
+                            <p>如企业不配合，向当地劳动仲裁委员会申请仲裁，或申请劳动监察大队认定。</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon">4</div>
+                            <h4>社保补缴</h4>
+                            <p>确认身份后，凭认定文书到社保经办机构办理补缴手续。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="info-card">
+                    <div class="section-title">
+                        <h2>最新政策动态</h2>
+                    </div>
+                    <article style="margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="#">多地出台家属工社保补缴新规，简化认定程序</a></h3>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">近期，XX省人力资源和社会保障厅发布通知，明确对于因企业改制导致档案丢失的家属工，可凭公安机关证明及证人证言进行认定，不再强制要求原始招工档案。</p>
+                        <div style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--primary-color);">2023-10-15</div>
+                    </article>
+                    <article style="margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><a href="#">家属工医保报销比例调整通知</a></h3>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">关于提高家属工群体门诊慢性病报销限额及住院报销比例的实施办法，将于下月1日起正式执行。</p>
+                        <div style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--primary-color);">2023-09-28</div>
+                    </article>
+                    <div style="text-align: center;">
+                        <a href="#" class="btn btn-outline">查看更多政策</a>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>常见问题 (FAQ)</h3>
+                    <ul class="faq-list">
+                        <li>
+                            <h4>家属工认定需要哪些材料？</h4>
+                            <p>一般需要身份证、户口簿、原企业工作证明、工资发放记录、劳保卡以及必要的旁证材料。</p>
+                        </li>
+                        <li>
+                            <h4>企业倒闭了怎么办？</h4>
+                            <p>应向原企业的主管部门或清算组申请，或直接向当地劳动监察大队和社保部门反映情况。</p>
+                        </li>
+                        <li>
+                            <h4>补缴社保有滞纳金吗？</h4>
+                            <p>补缴通常会产生一定的滞纳金和利息，具体金额需根据当地社保局计算标准执行。</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>办事指南下载</h3>
+                    <div class="download-list">
+                        <a href="#">《家属工身份认定申请表》模板</a>
+                        <a href="#">社保补缴计算器使用说明</a>
+                        <a href="#">劳动仲裁申请书填写范本</a>
+                        <a href="#">各地政策汇总查询手册</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget" style="background-color: #ebf8ff; border-color: #bee3f8;">
+                    <h3 style="color: var(--primary-color); border-color: #bee3f8;">政策咨询通道</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">如对政策有疑问，可拨打全国人力资源社会保障服务热线：12333</p>
+                    <button class="btn btn-primary" style="width: 100%;">在线咨询</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">本站致力于为家属工群体提供准确的政策资讯和办事指引，帮助大家维护自身合法权益，解决历史遗留问题。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">政策法规库</a></li>
+                        <li><a href="#">各地办事大厅</a></li>
+                        <li><a href="#">法律援助申请</a></li>
+                        <li><a href="#">案例分享</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：12333</li>
+                        <li>邮箱：support@jiashagong.com</li>
+                        <li>地址：XX市XX区人力资源大厦</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 家属工政策咨询服务中心 版权所有
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的移动端菜单切换
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navMenu = document.querySelector('.nav-menu');
+
+            menuBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+
+            // 点击链接后自动关闭菜单
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
