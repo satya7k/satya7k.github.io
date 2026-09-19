@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>授课到天亮chu - 深度沉浸式自习室与考研集训服务</title>
+    <meta name="description" content="授课到天亮chu 提供全天候深度学习环境、专业导师陪读及全套考研资料服务，帮助学员在极限压力下高效突破，实现梦想。">
+    <meta name="keywords" content="授课到天亮chu, 考研自习室, 考研集训, 深度学习, 全天候授课, 考研辅导">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --accent-color: #ff6f00;
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+            box-shadow: 0 4px 6px rgba(255, 111, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #e65100;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 1.5rem;
+        }
+
+        .stat-item h3 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+            background-color: var(--card-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-color: var(--accent-color);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(26, 35, 126, 0.1);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        /* Environment Showcase */
+        .environment {
+            padding: 4rem 0;
+        }
+
+        .env-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .env-item {
+            position: relative;
+            height: 250px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .env-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .env-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .env-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 1rem;
+        }
+
+        /* Curriculum & Schedule */
+        .curriculum {
+            padding: 4rem 0;
+            background-color: var(--card-bg);
+        }
+
+        .schedule-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+        }
+
+        .schedule-list {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+        }
+
+        .schedule-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+
+        .time-tag {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 1rem;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .curriculum-content h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .topic-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .topic-card {
+            border: 1px solid #eee;
+            padding: 1rem;
+            border-radius: 4px;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .topic-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ddd;
+            line-height: 1;
+        }
+
+        .topic-info h4 {
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+
+        .topic-info p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 4rem 0;
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: white;
+        }
+
+        .faq-question:hover {
+            background-color: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            background-color: #f9f9f9;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 200px; /* approximate height */
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 0;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: #eceff1;
+            padding: 3rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: #b0bec5;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            color: #78909c;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-wrap: wrap;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .env-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .schedule-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>授课到天亮</span>chu!
+            </a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#features">核心优势</a></li>
+                    <li><a href="#environment">学习环境</a></li>
+                    <li><a href="#curriculum">课程安排</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1rem; color: white;">立即报名</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>不仅是学习，更是一场意志的淬炼</h1>
+                    <p>授课到天亮chu 提供极致的沉浸式备考环境。专业导师全程陪读，精准答疑，为考研学子打造24小时不间断的冲刺战场。</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; @media(min-width: 768px){justify-content: flex-start;}">
+                        <a href="#curriculum" class="btn btn-primary">查看课程表</a>
+                        <a href="#environment" class="btn btn-outline" style="border-color: white; color: white;">参观环境</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3>98%</h3>
+                            <p>上岸率</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24h</h3>
+                            <p>全天候服务</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>1:5</h3>
+                            <p>师生配比</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Using a high quality placeholder representing study environment -->
+                    <img src="https://picsum.photos/seed/study_dark/600/400" alt="深夜自习室场景" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>为什么选择授课到天亮chu?</h2>
+                    <p>我们深知备考的艰辛与孤独，因此我们提供的不止是座位，更是一套完整的学习解决方案。</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="icon-box">🌙</div>
+                        <h3>全天候授课</h3>
+                        <p>打破传统时间限制，从清晨的第一缕阳光到深夜的最后一盏灯，导师全程在线，随时解决疑难杂症，拒绝知识死角。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon-box">🧠</div>
+                        <h3>深度陪读模式</h3>
+                        <p>不仅仅是答疑，更注重学习习惯的养成。导师通过定期的阶段性测试、心态疏导，帮助学员保持最佳竞技状态。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon-box">📚</div>
+                        <h3>独家资料库</h3>
+                        <p>整合历年真题、名师笔记与内部讲义，所有资料均由资深教研团队整理，直击考点，节省学员无效翻书时间。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon-box">🛡️</div>
+                        <h3>封闭式管理</h3>
+                        <p>屏蔽外界干扰，提供餐饮与住宿一体化服务。专注于学习本身，让每一天都过得充实而有价值。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Environment Showcase -->
+        <section id="environment" class="environment">
+            <div class="container">
+                <div class="section-header">
+                    <h2>沉浸式学习环境</h2>
+                    <p>每一个细节都为专注设计，确保您能心无旁骛地投入到复习中。</p>
+                </div>
+                <div class="env-grid">
+                    <div class="env-item">
+                        <img src="https://picsum.photos/seed/library_dark/400/300" alt="静谧自习区" loading="lazy">
+                        <div class="env-overlay">静谧自习区</div>
+                    </div>
+                    <div class="env-item">
+                        <img src="https://picsum.photos/seed/lecture_hall/400/300" alt="大型授课教室" loading="lazy">
+                        <div class="env-overlay">大型授课教室</div>
+                    </div>
+                    <div class="env-item">
+                        <img src="https://picsum.photos/seed/coffee_shop_study/400/300" alt="茶歇交流区" loading="lazy">
+                        <div class="env-overlay">茶歇交流区</div>
+                    </div>
+                    <div class="env-item">
+                        <img src="https://picsum.photos/seed/dormitory/400/300" alt="舒适休息区" loading="lazy">
+                        <div class="env-overlay">舒适休息区</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum & Schedule -->
+        <section id="curriculum" class="curriculum">
+            <div class="container">
+                <div class="section-header">
+                    <h2>科学作息与课程安排</h2>
+                    <p>根据考研冲刺周期定制的时间表，劳逸结合，效率倍增。</p>
+                </div>
+                <div class="schedule-container">
+                    <div class="schedule-list">
+                        <h3>每日作息表</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="schedule-item">
+                                <span class="time-tag">07:00</span>
+                                <span>晨读 & 晨测</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time-tag">09:00</span>
+                                <span>基础课程讲解</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time-tag">12:00</span>
+                                <span>午餐 & 午休</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time-tag">14:00</span>
+                                <span>专项强化训练</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time-tag">18:00</span>
+                                <span>晚餐 & 复盘</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time-tag">19:00</span>
+                                <span>真题模拟/答疑</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time-tag">22:00</span>
+                                <span>晚自习/答疑</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time-tag">24:00</span>
+                                <span>熄灯休息</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="curriculum-content">
+                        <h3>阶段性复习重点</h3>
+                        <div class="topic-list">
+                            <div class="topic-card">
+                                <span class="topic-number">01</span>
+                                <div class="topic-info">
+                                    <h4>基础夯实阶段</h4>
+                                    <p>全面梳理知识点，构建知识框架，不留死角。</p>
+                                </div>
+                            </div>
+                            <div class="topic-card">
+                                <span class="topic-number">02</span>
+                                <div class="topic-info">
+                                    <h4>强化提升阶段</h4>
+                                    <p>大量刷题训练，总结错题规律，提升解题速度。</p>
+                                </div>
+                            </div>
+                            <div class="topic-card">
+                                <span class="topic-number">03</span>
+                                <div class="topic-info">
+                                    <h4>冲刺模考阶段</h4>
+                                    <p>全真模拟考试，调整生物钟，适应高强度节奏。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            授课到天亮chu 是否接受短期体验？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>我们提供3天至1周的短期体验名额，您可以先试住试学，感受我们的教学模式和环境后再做决定。短期体验通常需提前预约，费用包含住宿和基础资料。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            如果身体不适，导师会及时响应吗？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>当然。我们的导师实行轮班制，确保24小时内至少有一名导师在岗。一旦发现学员有身体不适或情绪波动，导师会立即介入，提供必要的医疗协助或心理疏导。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            餐饮是如何安排的？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>我们提供营养均衡的自助餐和定制套餐。食堂食材新鲜，严格把控卫生安全。对于有特殊饮食需求的学员，也可以在指导下自行解决。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            需要自带电脑或教材吗？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>基础教材和讲义我们会提供，但建议您携带笔记本电脑以便于记笔记和查阅资料。教室配备有网络和投影设备。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="cta-section">
+            <div class="container">
+                <h2>现在加入，开启你的蜕变之旅</h2>
+                <p>名额有限，席位紧张。立即联系我们的招生老师，获取最新的集训营排期与优惠政策。</p>
+                <button class="btn btn-primary" style="background-color: white; color: var(--accent-color); font-size: 1.2rem;" onclick="showContactModal()">预约咨询</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于授课到天亮chu</h4>
+                    <p style="color: #b0bec5; line-height: 1.8;">
+                        我们致力于为考研学子提供最极致的学习环境和最专业的指导服务。在这里，每一盏不灭的灯都是梦想的见证。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#features">核心优势</a></li>
+                        <li><a href="#environment">环境展示</a></li>
+                        <li><a href="#curriculum">课程表</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：contact@chu-edu.com</li>
+                        <li>地址：北京市海淀区教育园区A座</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 授课到天亮chu. All Rights Reserved. 仅供演示使用。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        // FAQ Accordion
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all other items
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                faq.classList.remove('active');
+            });
+
+            // Toggle clicked item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Simple Contact Interaction
+        function showContactModal() {
+            // In a real scenario, this would open a modal or redirect to a form
+            // Here we simulate a user-friendly interaction
+            const btn = event.target;
+            const originalText = btn.innerText;
+            
+            btn.innerText = "正在跳转...";
+            btn.style.opacity = "0.7";
+            
+            setTimeout(() => {
+                alert("感谢您的咨询意向！\n请拨打我们的招生热线：400-123-4567");
+                btn.innerText = originalText;
+                btn.style.opacity = "1";
+            }, 800);
+        }
+    </script>
+</body>
+</html>
