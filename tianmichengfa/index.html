@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="甜蜜惩罚无删减 - 提供完整版、未删减的甜蜜惩罚漫画阅读服务，包含高清图片、在线阅读、剧情解析及正版授权信息。">
+    <meta name="keywords" content="甜蜜惩罚无删减,甜蜜惩罚漫画,无删减漫画,在线阅读,正版授权">
+    <title>甜蜜惩罚无删减-完整版漫画在线阅读与正版授权信息</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b81;
+            --secondary-color: #ff9eb5;
+            --bg-color: #fff0f3;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-sub: #636e72;
+            --border-radius: 12px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: var(--primary-color);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 129, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #ff4757;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #fff0f3 0%, #ffe3e9 100%);
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: rgba(255, 107, 129, 0.1);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Manga List */
+        .section-title {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .manga-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .manga-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .manga-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card-cover {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .manga-card:hover .card-cover img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+            backdrop-filter: blur(4px);
+        }
+
+        .card-info {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #2ecc71;
+            border-radius: 50%;
+            margin-right: 4px;
+        }
+
+        /* Sidebar */
+        .sidebar-section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .info-label {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .info-value {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .rating {
+            color: #f1c40f;
+            font-weight: bold;
+        }
+
+        .chapter-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .chapter-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .chapter-item a {
+            color: var(--text-main);
+            flex: 1;
+        }
+
+        .chapter-item a:hover {
+            color: var(--primary-color);
+        }
+
+        .chapter-date {
+            font-size: 0.75rem;
+            color: var(--text-sub);
+            margin-left: 10px;
+        }
+
+        /* Safety Notice */
+        .safety-banner {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+
+        .safety-banner h3 {
+            color: #856404;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .safety-banner ul {
+            margin-left: 20px;
+            color: #856404;
+        }
+
+        .safety-banner li {
+            margin-bottom: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--card-bg);
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-sub);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: var(--text-sub);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>无删减</span> 漫画阅读
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">分类</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">免费阅读</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>甜蜜惩罚无删减版</h1>
+            <p>为您呈现《甜蜜惩罚》完整版剧情与高清无删减漫画章节，体验原汁原味的恋爱故事。</p>
+            <div class="hero-tags">
+                <span class="tag">恋爱喜剧</span>
+                <span class="tag">校园生活</span>
+                <span class="tag">独家连载</span>
+                <span class="tag">高清画质</span>
+            </div>
+            <div style="display: flex; gap: 15px; justify-content: center;">
+                <button class="btn btn-primary" onclick="window.scrollTo({top: 400, behavior: 'smooth'})">开始阅读</button>
+                <button class="btn btn-outline">加入书架</button>
+            </div>
+        </section>
+
+        <!-- Safety Notice -->
+        <section class="safety-banner">
+            <h3>⚠️ 版权与安全提示</h3>
+            <p>本站仅提供正版漫画的阅读指引与资讯服务。请支持正版，通过官方渠道阅读以获得最佳阅读体验并支持作者创作。请勿传播盗版资源。</p>
+        </section>
+
+        <div class="content-grid">
+            <!-- Main Content: Manga List -->
+            <section class="main-content">
+                <div class="section-title">
+                    <span>热门章节推荐</span>
+                    <a href="#" style="font-size: 0.9rem; color: var(--primary-color);">查看更多 &rarr;</a>
+                </div>
+
+                <div class="manga-list">
+                    <!-- Card 1 -->
+                    <article class="manga-card">
+                        <div class="card-cover">
+                            <img src="https://picsum.photos/seed/manga1/300/450" alt="甜蜜惩罚封面">
+                            <span class="card-badge">无删减</span>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">甜蜜惩罚 第1话</h3>
+                            <div class="card-meta">
+                                <span><span class="status-dot"></span>连载中</span>
+                                <span class="rating">9.2</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="manga-card">
+                        <div class="card-cover">
+                            <img src="https://picsum.photos/seed/manga2/300/450" alt="甜蜜惩罚封面">
+                            <span class="card-badge">无删减</span>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">甜蜜惩罚 第2话</h3>
+                            <div class="card-meta">
+                                <span><span class="status-dot"></span>连载中</span>
+                                <span class="rating">9.1</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="manga-card">
+                        <div class="card-cover">
+                            <img src="https://picsum.photos/seed/manga3/300/450" alt="甜蜜惩罚封面">
+                            <span class="card-badge">无删减</span>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">甜蜜惩罚 第3话</h3>
+                            <div class="card-meta">
+                                <span><span class="status-dot"></span>连载中</span>
+                                <span class="rating">9.0</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="manga-card">
+                        <div class="card-cover">
+                            <img src="https://picsum.photos/seed/manga4/300/450" alt="甜蜜惩罚封面">
+                            <span class="card-badge">无删减</span>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">甜蜜惩罚 第4话</h3>
+                            <div class="card-meta">
+                                <span><span class="status-dot"></span>连载中</span>
+                                <span class="rating">8.9</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="manga-card">
+                        <div class="card-cover">
+                            <img src="https://picsum.photos/seed/manga5/300/450" alt="甜蜜惩罚封面">
+                            <span class="card-badge">无删减</span>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">甜蜜惩罚 第5话</h3>
+                            <div class="card-meta">
+                                <span><span class="status-dot"></span>连载中</span>
+                                <span class="rating">8.8</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="manga-card">
+                        <div class="card-cover">
+                            <img src="https://picsum.photos/seed/manga6/300/450" alt="甜蜜惩罚封面">
+                            <span class="card-badge">无删减</span>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="card-title">甜蜜惩罚 第6话</h3>
+                            <div class="card-meta">
+                                <span><span class="status-dot"></span>连载中</span>
+                                <span class="rating">8.7</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sidebar: Info & Chapters -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>作品简介</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 10px; line-height: 1.6;">
+                        《甜蜜惩罚》讲述了平凡的女高中生神坂千夏，在放学回家的路上被一名神秘男子强行亲吻并勒索的故事。为了保守秘密，她被迫与对方签订了契约，成为了他的“专属女仆”。随着剧情的发展，两人之间逐渐产生了微妙的情感变化，甜蜜与惩罚交织，展开了一段令人心跳加速的校园恋爱故事。
+                    </p>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>作品数据</h3>
+                    <div class="info-item">
+                        <span class="info-label">作者</span>
+                        <span class="info-value">未知/官方授权</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">状态</span>
+                        <span class="info-value">连载中</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">类型</span>
+                        <span class="info-value">恋爱 / 校园 / 恋爱喜剧</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">评分</span>
+                        <span class="info-value rating">9.2 分</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">人气指数</span>
+                        <span class="info-value">Top 10</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>最新章节</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item">
+                            <a href="#">甜蜜惩罚 第1话</a>
+                            <span class="chapter-date">刚刚</span>
+                        </div>
+                        <div class="chapter-item">
+                            <a href="#">甜蜜惩罚 第2话</a>
+                            <span class="chapter-date">昨天</span>
+                        </div>
+                        <div class="chapter-item">
+                            <a href="#">甜蜜惩罚 第3话</a>
+                            <span class="chapter-date">3天前</span>
+                        </div>
+                        <div class="chapter-item">
+                            <a href="#">甜蜜惩罚 第4话</a>
+                            <span class="chapter-date">1周前</span>
+                        </div>
+                        <div class="chapter-item">
+                            <a href="#">甜蜜惩罚 第5话</a>
+                            <span class="chapter-date">2周前</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <a href="#" class="logo" style="font-size: 1.2rem; margin-bottom: 10px; display:inline-block;">
+                    <span>无删减</span> 漫画阅读
+                </a>
+                <p style="color: var(--text-sub); font-size: 0.9rem; max-width: 300px;">
+                    专注于提供正版漫画的阅读资讯与正版授权信息，致力于为读者提供最优质的阅读体验。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">首页推荐</a></li>
+                    <li><a href="#">分类浏览</a></li>
+                    <li><a href="#">排行榜单</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">阅读指南</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">联系客服</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 甜蜜惩罚无删减阅读平台. All Rights Reserved.</p>
+            <p style="margin-top: 5px; font-size: 0.8rem; color: #aaa;">本站内容仅供展示，请支持正版漫画作者。</p>
+        </div>
+    </footer>
+
+</body>
+                      </html>
